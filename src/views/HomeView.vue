@@ -252,9 +252,9 @@ export default {
   computed:{
     pokemonListFiltered(){
       if(this.menuActive=='list'){
-        return this.pokemonList.filter(it=>it.name.indexOf(this.search)!= -1)
+        return this.pokemonList.filter(it=>it.name.indexOf(this.search.toLowerCase())!= -1)
       }else{
-        return this.pokedex.filter(it=>it.name.indexOf(this.search)!= -1)
+        return this.pokedex.filter(it=>it.name.indexOf(this.search.toLowerCase())!= -1)
       }
       
     },
